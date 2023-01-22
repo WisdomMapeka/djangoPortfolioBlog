@@ -14,13 +14,15 @@ from pathlib import Path
 import os
 import json
 
-with open('../../../portfoliosite.json') as config_file:
-    config = json.load(config_file)
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+PARENT_CONTAINER_DIR = Path(__file__).resolve().parent.parent.parent.parent
+
+
+config_file_path = os.path.join(PARENT_CONTAINER_DIR , "portfoliosite.json")
+with open(config_file_path) as config_file:
+    config = json.load(config_file)
 
 
 # Quick-start development settings - unsuitable for production
