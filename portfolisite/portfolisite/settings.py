@@ -12,6 +12,12 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+import json
+
+with open('../../../portfoliosite.json') as config_file:
+    config = json.load(config_file)
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-aomf__%03h!6@d86m!u778zsn@sl%0b1=(8+w6%*64z!+($850'
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,9 +91,9 @@ WSGI_APPLICATION = 'portfolisite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfoliositedb',
-        'USER': 'wiz',
-        'PASSWORD': '543210wiz',
+        'NAME': config['NAME'],
+        'USER': config['USER'],
+        'PASSWORD': config['PASSWORD'],
         'HOST': 'localhost',
         'PORT': '',
     }
