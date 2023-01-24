@@ -51,9 +51,9 @@ GRANT ALL PRIVILEGES ON DATABASE xxx TO wiz;
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfoliositedb',
-        'USER': 'wiz',
-        'PASSWORD': '543210wiz',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
