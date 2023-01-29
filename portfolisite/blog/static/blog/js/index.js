@@ -3,7 +3,7 @@
     let top_nav_menu = document.querySelector("#top-nav-menu-id");
     let menu_toogle_button = document.querySelector("#menu-toogle-button-id");
 
-    let toggleSearchBar = function () {
+    let toggleDropDown = function () {
        console.log("run");
        console.log(top_nav_menu.classList.contains("hide-menu"));
 
@@ -15,7 +15,7 @@
 
     }
 
-    toggleSearchBar();
-    menu_toogle_button.addEventListener("click",toggleSearchBar);
+    toggleDropDown();
+    menu_toogle_button.addEventListener("click",toggleDropDown);
 
     
