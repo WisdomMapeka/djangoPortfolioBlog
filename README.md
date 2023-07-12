@@ -5,7 +5,7 @@ CREATING VIRTUAL ENV NORMAL WAY
 python3 -m venv portfoliosite-env
 
 ACTIVATE VENV
--run the command in the folder S24PROJECT on terminal
+-run the command in the on terminal
 source portfoliosite-env/bin/activate
 
 on windows
