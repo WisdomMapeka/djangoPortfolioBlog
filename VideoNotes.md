@@ -1,4 +1,4 @@
-Video one Setting The environment
+Video one Setting The environment 1
 ---------------------------------
 Assumptions
 -have python3 installed
@@ -27,3 +27,7 @@ cd portfoliosite
 
 CREATE PROJECT
 django-admin startproject portfoliosite
+
+video 2 menu
+video 3 hero section
+vide 4 creating thumbnails article-recents

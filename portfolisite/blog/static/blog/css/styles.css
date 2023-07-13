@@ -49,6 +49,7 @@ body {
     color: white;
 }
 
+
 @media screen and (min-width: 700px) {
     .menu-toogle-button{
         display: none;
@@ -77,6 +78,8 @@ body {
     background-color: #443b3b;
     overflow: auto;
     margin-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .hero-section-container{
     margin-top: 10px;
@@ -96,53 +99,100 @@ body {
     justify-content: space-around;
     margin-top: 10px;
 }
-
+.hero-section-col1{
+    font-size: 18px;
+}
 .hero-section-col1,
 .hero-section-col2{
     width: 50%;
     padding: 20px;
-    padding: 40px;
     margin-left: 60px;
     margin-right: 60px;
     margin-bottom: 30px;
     color:white
 }
 
-.hero-section-col2{
-    background-color:white;
-    color: black;
-}
 
 .hero-section-col2{
     border: #443b3b 1px solid;
     border-top: black 4px solid;
-    box-shadow: #c9c7c7  5px 10px 40px;
+    background-color:white;
+    color:black;
 }
 
-.hero-section-col1 > :nth-child(1),
-.hero-section-col2 > :nth-child(1){
+.hero-section-col1 > div:nth-child(1),
+.hero-section-col2 > div:nth-child(1){
     font-weight: 600;
     margin-bottom: 20px;
     font-size: 20px;
     
 }
 
+.socials-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.socials{
+    text-decoration: none;
+}
+.socials > div{
+    display: flex;
+    padding: 10px;
+}
+.socials > div div{
+    padding: 5px;
+}
 @media screen and (min-width: 832px) {
     .hero-section-sub-container{
         flex-wrap: unset;
     }
 }
 
-.recent-blog-articles{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.recent-blog-articles-container > div:nth-child(1){
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.recent-blog-articles-container{
     background-color: white;
     padding: 30px;
     margin: 30px;
     border: #443b3b 1px solid;
     border-top: black 4px solid;
+
+}
+.recent-blog-articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     /* box-shadow: #c9c7c7  5px 10px 40px; */
+}
+
+.article-recent{
+    display: flex;
+    text-decoration: none;
+    margin: 10px;
+}
+.article-recent > div:nth-child(1){
+ margin-right: 10px;
+}
+.recent-article-title-date span{
+    display: block;
+}
+
+.recent-article-title-date span:nth-child(1){
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.recent-article-title-date span:nth-child(2){
+    color:#636161;
+    font-size: 14px;
+}
+.home-recent-article-lead-img{
+    width: 100px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 5px;
 }
 
 /* ----------video section 2 hero-section ends------------------------------------------- */

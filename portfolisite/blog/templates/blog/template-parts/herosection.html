@@ -1,44 +1,49 @@
 {% load static %}
-<section class="hero-section">
+<section class="hero-section" {% if home.hero_background_img %} style="background-image: url({{home.hero_background_img.url}}); background-size: cover; background-repeat: no-repeat;" {% endif %}>
     <div class="hero-section-container">
-        <div class="name">Wiz M</div>
+        <!-- <div class="name">{{home.site_name}}</div> -->
         <div class="hero-section-sub-container">
             <div class="hero-section-col1">
                 <div>About</div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae rerum reiciendis placeat modi cum fugiat repellendus dicta! A, assumenda culpa, minus repellat ipsam iusto temporibus corrupti impedit aperiam quo facere?
+                  {{home.about_summary}}
                     <a href="http://">See more ...</a>
                 </div>
             </div>
             <div class="hero-section-col2">
                 <div>Social</div>
-                <div>
-                    <div>GitHub</div>
-                    <div>Facebook</div>
-                    <div>Twitter</div>
-                    <div>LinkedIn</div>
+                <div class="socials-container">
+                    {% for i in socials %}
+                    <a  class="socials" href="{{i.social_link}}">
+                        <div>
+                            {% if i.social_icon %}
+                            <div><img width="20" height= "" src="{{i.social_icon.url}}" alt=""></div>
+                            {% endif %}
+                            <div>{{i.social_name}}</div>
+                        </div>
+                    </a>
+                    {% endfor %}
+
                 </div>
             </div>
         </div>
     </div>
 
 
-    <div class="recent-blog-articles">
-        <div class="article-recent">
-            <div><img src="" alt=""></div>
-            <div>article</div>
-        </div>
-        <div class="article-recent">
-            <div><img src="" alt=""></div>
-            <div>article</div>
-        </div>
-        <div class="article-recent">
-            <div><img src="" alt=""></div>
-            <div>article</div>
-        </div>
-        <div class="article-recent">
-            <div><img src="" alt=""></div>
-            <div>article</div>
+    <div class="recent-blog-articles-container">
+        <div>Recent articles</div>
+        <div class="recent-blog-articles">
+            {% for article in recent_articles %}
+            <a href="" class="article-recent">
+                {% if article.lead_img %}
+                <div class="home-recent-article-lead-img"><img src="{{article.lead_img.url}}" alt=""></div>
+                {% endif %}
+                <div class="recent-article-title-date">
+                <span>{{article.title}}</span> 
+                    <span>{{article.date_created}}</span>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
 </section>
